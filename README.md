@@ -1,2 +1,3 @@
-# 2048
-A simple C game, made much more complicated then it really needs to be.
+# 2048-Project
+
+Simple C 2048 game brought to you by yours truly.
