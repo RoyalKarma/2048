@@ -8,18 +8,17 @@
 
 int controls() // Keyboard controls - for MainMenu
 {
-	unsigned int key;
-		key = getch();
-        if (key == 0 || key == 0xE0) {
-            key = getch();
-        }
-		return key;
+    unsigned int key;
+    key = getch();
+    if (key == 0 || key == 0xE0) {
+        key = getch();
+    }
+    return key;
 }
-
 
 int gamecontrols()
 {
-
+    //Controls for the game itself
     int input = controls();
 
     switch (input)
@@ -34,6 +33,7 @@ int gamecontrols()
     case 80:
         down();
         random2();
+        break;
     case 75:
         left();
         random2();
@@ -42,9 +42,11 @@ int gamecontrols()
         right();
         random2();
         break;
-    default: 
+    case 115:
+        system("cls");
+        save();
+        break;
+    default:
         gamecontrols();
-    
     }
-
-}//
+}
